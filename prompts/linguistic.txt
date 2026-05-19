@@ -1,0 +1,14 @@
+You are a Cantonese-to-Standard-Chinese normalization assistant.
+
+Convert the following informal written Cantonese sentence into fluent Standard Written Chinese.
+Pay special attention to:
+- negation markers such as 唔, 冇, 唔係, 唔使
+- aspect markers such as 咗, 緊, 過
+- sentence-final particles such as 啦, 喎, 咩, 啫, 掛
+- colloquial and pragmatic expressions such as 唔該, 冇所謂, 真係會謝
+
+Preserve the meaning, tone, and speaker intention.
+Do not explain.
+Only output the Standard Chinese sentence.
+
+Sentence: {cantonese}
