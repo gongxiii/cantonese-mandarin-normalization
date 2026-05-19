@@ -1,0 +1,51 @@
+id,cantonese,context,mandarin_reference,type,source_type,notes
+001,你有冇睇到佢個post？,asking about a social media post,你有没有看到他的帖子？,negation,online_inspired_author_constructed,有冇 forms a yes/no question; post is common code-mixed online vocabulary
+002,我唔係好明佢想講咩。,commenting on a confusing post,我不是很明白他想说什么。,negation,online_inspired_author_constructed,唔係好明 means not really understand
+003,佢今日冇返工，話唔舒服。,explaining why someone is absent,他今天没有上班，说身体不舒服。,negation,online_inspired_author_constructed,冇 marks absence/non-occurrence; 返工=上班
+004,你唔使咁緊張啦。,comforting someone online,你不用这么紧张了。,negation,online_inspired_author_constructed,唔使=不用; 啦 softens tone
+005,我唔覺得呢個方法有用。,disagreeing in a comment,我不觉得这个方法有用。,negation,online_inspired_author_constructed,唔覺得=不觉得
+006,佢唔係唔想去，只係冇時間。,clarifying someone’s intention,他不是不想去，只是没有时间。,negation,online_inspired_author_constructed,double negation pattern
+007,我冇諗過會咁多人留言。,reacting to many comments,我没想到会有这么多人留言。,negation,online_inspired_author_constructed,冇諗過=没想到/没想过
+008,你唔好再覆佢啦。,telling someone not to reply,你不要再回复他了。,negation,online_inspired_author_constructed,唔好=不要; 覆=回复
+009,呢件事唔關我事。,denying responsibility,这件事跟我没有关系。,negation,online_inspired_author_constructed,fixed expression; not word-for-word
+010,我唔知佢點解突然嬲咗。,explaining confusion,我不知道他为什么突然生气了。,negation,online_inspired_author_constructed,唔知=不知道; 點解=为什么; 嬲=生气
+011,我啱啱睇咗你條片。,commenting after watching a video,我刚刚看了你的视频。,aspect_marker,online_inspired_author_constructed,咗 marks completed action; 條片=video
+012,佢仲喺度等緊你覆。,someone is waiting for a reply,他还在等你回复。,aspect_marker,online_inspired_author_constructed,緊 marks ongoing action
+013,我已經買咗飛啦。,telling someone tickets are bought,我已经买票了。,aspect_marker,online_inspired_author_constructed,咗 and 啦 indicate completed update
+014,你有冇試過呢個app？,asking about app experience,你有没有试过这个应用？,aspect_marker,online_inspired_author_constructed,過 marks experience
+015,佢講緊電話，等陣先覆你。,explaining delayed reply,他正在打电话，待会儿再回复你。,aspect_marker,online_inspired_author_constructed,講緊電話=正在打电话
+016,我食咗少少嘢先出門。,explaining before going out,我吃了一点东西才出门。,aspect_marker,online_inspired_author_constructed,咗 marks completion; 嘢=东西
+017,個post刪咗，依家睇唔到。,post is no longer visible,那个帖子删了，现在看不到。,aspect_marker,online_inspired_author_constructed,刪咗 indicates result state
+018,我哋傾緊聽日嘅安排。,group chat planning,我们正在讨论明天的安排。,aspect_marker,online_inspired_author_constructed,傾緊=正在讨论
+019,佢之前去過呢間餐廳。,talking about prior experience,他之前去过这家餐厅。,aspect_marker,online_inspired_author_constructed,過 marks past experience
+020,我等咗好耐都未收到回覆。,waiting for a reply,我等了很久都还没有收到回复。,aspect_marker,online_inspired_author_constructed,咗 with duration; 未=还没有
+021,呢個價錢真係好抵喎。,commenting on a deal,这个价格真的很划算。,sentence_final_particle,online_inspired_author_constructed,喎 adds assertion/light emphasis
+022,你咁講又好似有道理喎。,responding to someone’s point,你这么说好像也有道理。,sentence_final_particle,online_inspired_author_constructed,喎 indicates realization/soft agreement
+023,唔好嬲啦，我只係講笑。,softening after a joke,不要生气了，我只是开玩笑。,sentence_final_particle,online_inspired_author_constructed,啦 softens command
+024,你真係信佢講嘅嘢咩？,questioning someone’s belief,你真的相信他说的话吗？,sentence_final_particle,online_inspired_author_constructed,咩 marks surprise/skeptical question
+025,我都係想幫手啫。,explaining intention,我也只是想帮忙而已。,sentence_final_particle,online_inspired_author_constructed,啫 means just/only; tone matters
+026,佢應該唔會遲到掛。,uncertain assumption,他应该不会迟到吧。,sentence_final_particle,online_inspired_author_constructed,掛 indicates uncertainty similar to 吧
+027,咁都得㗎？,surprised reaction,这样也可以吗？,sentence_final_particle,online_inspired_author_constructed,㗎 adds emphatic question tone
+028,你快啲覆我啦。,urging reply,你快点回复我吧。,sentence_final_particle,online_inspired_author_constructed,啦 makes request more natural
+029,呢件事冇咁簡單喎。,warning about complexity,这件事没有那么简单。,sentence_final_particle,online_inspired_author_constructed,喎 adds corrective tone
+030,佢可能只係忙啫。,defending someone,他可能只是忙而已。,sentence_final_particle,online_inspired_author_constructed,啫 softens explanation
+031,我今日真係好攰。,posting about being tired,我今天真的很累。,colloquial_vocabulary,online_inspired_author_constructed,攰=累
+032,呢間舖啲嘢幾好食。,reviewing a shop,这家店的东西挺好吃的。,colloquial_vocabulary,online_inspired_author_constructed,舖=店; 好食=好吃
+033,你得閒幫我睇睇呢段字。,asking someone to check text,你有空帮我看看这段文字。,colloquial_vocabulary,online_inspired_author_constructed,得閒=有空; 睇=看
+034,佢講嘢好直接。,describing someone online,他说话很直接。,colloquial_vocabulary,online_inspired_author_constructed,講嘢=说话
+035,呢張相影得幾靚。,commenting on a photo,这张照片拍得挺好看。,colloquial_vocabulary,online_inspired_author_constructed,靚=好看/漂亮
+036,我一陣先再搵你。,delaying a reply,我待会儿再找你。,colloquial_vocabulary,online_inspired_author_constructed,一陣=待会儿; 搵=找
+037,佢成日喺群入面潛水。,talking about group chat behavior,他总是在群里潜水。,colloquial_vocabulary,online_inspired_author_constructed,成日=总是; 喺=在
+038,呢個留言真係好癲。,reacting to a comment,这条留言真的很离谱。,colloquial_vocabulary,online_inspired_author_constructed,癲 here means crazy/ridiculous not literal mental illness
+039,我屋企個wifi又壞咗。,complaining online,我家里的Wi-Fi又坏了。,colloquial_vocabulary,online_inspired_author_constructed,屋企=家里
+040,你可唔可以send返個link俾我？,asking for a link,你可不可以把链接再发给我？,colloquial_vocabulary,online_inspired_author_constructed,code-mixing; 俾=给
+041,唔該你幫我睇一睇呢個表。,polite request,麻烦你帮我看一下这个表。,pragmatic_expression,online_inspired_author_constructed,唔該 means please/thanks depending on context; here request
+042,唔該晒，問題解決咗。,thanking someone after help,太谢谢了，问题解决了。,pragmatic_expression,online_inspired_author_constructed,唔該晒 expresses thanks
+043,得閒飲茶啊。,casual friendly closing,有空一起喝茶啊。,pragmatic_expression,online_inspired_author_constructed,fixed social expression; not necessarily literal immediate plan
+044,冇所謂啦，你決定就得。,letting someone decide,没关系，你决定就可以。,pragmatic_expression,online_inspired_author_constructed,冇所謂 means it does not matter/no problem
+045,你慢慢嚟，唔急。,reassuring someone,你慢慢来，不着急。,pragmatic_expression,online_inspired_author_constructed,common comforting expression
+046,幫我留意下有冇更新。,asking someone to watch for updates,帮我留意一下有没有更新。,pragmatic_expression,online_inspired_author_constructed,留意下=留意一下
+047,我真係會謝。,complaining jokingly,我真的很无语。,pragmatic_expression,online_inspired_author_constructed,online-style expression; not literal thanks
+048,辛苦晒你整理啲資料。,thanking someone for work,辛苦你整理这些资料了。,pragmatic_expression,online_inspired_author_constructed,辛苦晒 expresses appreciation
+049,你話點就點啦。,yielding to someone’s choice,你说怎么办就怎么办吧。,pragmatic_expression,online_inspired_author_constructed,pragmatic concession; 啦 softens tone
+050,有咩事再喺群入面講。,closing a discussion,有什么事再在群里说。,pragmatic_expression,online_inspired_author_constructed,有咩事=有什么事; 群入面=群里
