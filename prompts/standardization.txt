@@ -1,0 +1,6 @@
+Convert the following social-media-style written Cantonese sentence into natural Standard Written Chinese.
+Preserve the original meaning and tone.
+Do not explain.
+Only output the Standard Chinese sentence.
+
+Sentence: {cantonese}
