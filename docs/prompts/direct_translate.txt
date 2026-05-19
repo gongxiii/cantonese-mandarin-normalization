@@ -1,4 +1,0 @@
-Translate the following Cantonese sentence into Standard Written Chinese.
-Only output the translation.
-
-Sentence: {cantonese}
