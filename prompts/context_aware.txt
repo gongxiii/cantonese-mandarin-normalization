@@ -1,0 +1,8 @@
+Convert the following social-media-style written Cantonese sentence into Standard Written Chinese based on the context.
+
+Preserve meaning, tone, and speaker intention.
+Do not explain.
+Only output the Standard Chinese sentence.
+
+Context: {context}
+Sentence: {cantonese}
