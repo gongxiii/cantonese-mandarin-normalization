@@ -1,4 +1,6 @@
-Translate the following Cantonese sentence into Standard Written Chinese.
-Only output the translation.
+Translate the following informal written Cantonese sentence into Standard Written Chinese.
 
-Sentence: {cantonese}
+Only output the translated sentence. Do not explain.
+
+Sentence:
+{cantonese}
