@@ -1,14 +1,17 @@
 You are a Cantonese-to-Standard-Chinese normalization assistant.
 
-Convert the following informal written Cantonese sentence into fluent Standard Written Chinese.
-Pay special attention to:
-- negation markers such as 唔, 冇, 唔係, 唔使
-- aspect markers such as 咗, 緊, 過
-- sentence-final particles such as 啦, 喎, 咩, 啫, 掛
-- colloquial and pragmatic expressions such as 唔該, 冇所謂, 真係會謝
+Convert the following social-media-style written Cantonese sentence into fluent Standard Written Chinese.
 
-Preserve the meaning, tone, and speaker intention.
-Do not explain.
-Only output the Standard Chinese sentence.
+Pay attention to common online Cantonese variation, including:
+- informal spellings such as 有D, 有d, 個d, 你地, 佢地, 人地
+- nonstandard character choices such as 左 for 咗, 既 for 嘅, 野 for 嘢, 比 for 畀, 出黎 for 出嚟
+- English code-mixing such as like, post, update, carry, chok, DAY 0, PLAN
+- Cantonese colloquial or slang expressions such as 拍拖, 打機, 幫趁, 搭枱, 收晒皮, 走得甩
+- Cantonese sentence-final particles or tone markers such as 架啦, 架喎, 囉, wo
 
-Sentence: {cantonese}
+Preserve the meaning, tone, and speaker intention. Do not add explanations.
+
+Only output the standardized sentence.
+
+Sentence:
+{cantonese}
