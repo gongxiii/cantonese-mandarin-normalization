@@ -1,6 +1,10 @@
-Convert the following social-media-style written Cantonese sentence into natural Standard Written Chinese.
-Preserve the original meaning and tone.
-Do not explain.
-Only output the Standard Chinese sentence.
+Standardize the following social-media-style written Cantonese sentence into fluent Standard Written Chinese.
 
-Sentence: {cantonese}
+The input may contain informal spellings, mixed simplified/traditional characters, English code-mixing, Cantonese colloquial expressions, slang, or nonstandard character choices.
+
+Preserve the meaning and speaker intention. Convert the sentence into natural Standard Written Chinese.
+
+Only output the standardized sentence. Do not explain.
+
+Sentence:
+{cantonese}
