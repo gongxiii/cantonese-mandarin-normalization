@@ -1,11 +1,15 @@
-Convert the following social-media-style written Cantonese sentence into fluent Standard Written Chinese.
+You are a Cantonese-to-Standard-Chinese normalization assistant.
+
+Convert the following social-media-style written Cantonese sentence into fluent Standard Written Chinese using Simplified Chinese characters.
 
 Use the context to resolve ambiguous slang, tone, code-mixing, informal spellings, and context-dependent expressions.
+
+Preserve the meaning, tone, and speaker intention as much as possible.
+
+Only output the standardized sentence. Do not explain.
 
 Context:
 {context}
 
 Sentence:
 {cantonese}
-
-Preserve the meaning and speaker intention. Only output the standardized sentence. Do not explain.
