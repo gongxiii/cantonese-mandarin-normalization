@@ -1,4 +1,4 @@
-Translate the following informal written Cantonese sentence into Standard Written Chinese.
+Translate the following informal written Cantonese sentence into fluent Standard Written Chinese using Simplified Chinese characters.
 
 Only output the translated sentence. Do not explain.
 
