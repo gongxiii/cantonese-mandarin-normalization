@@ -1,8 +1,8 @@
-Standardize the following social-media-style written Cantonese sentence into fluent Standard Written Chinese.
+Standardize the following social-media-style written Cantonese sentence into fluent Standard Written Chinese using Simplified Chinese characters.
 
-The input may contain informal spellings, mixed simplified/traditional characters, English code-mixing, Cantonese colloquial expressions, slang, or nonstandard character choices.
+The input may contain informal spellings, mixed Traditional/Simplified characters, English code-mixing, Cantonese colloquial expressions, slang, or nonstandard character choices.
 
-Preserve the meaning and speaker intention. Convert the sentence into natural Standard Written Chinese.
+Preserve the meaning and speaker intention.
 
 Only output the standardized sentence. Do not explain.
 
