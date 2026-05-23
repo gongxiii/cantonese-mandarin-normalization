@@ -1,0 +1,3 @@
+pandas
+opencc-python-reimplemented
+openai
