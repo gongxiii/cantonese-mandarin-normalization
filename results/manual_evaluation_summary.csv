@@ -1,0 +1,4 @@
+﻿method,acceptable,partial,wrong,total,acceptable_rate
+direct_replacement,8,16,16,40,0.2
+google_translate,8,11,21,40,0.2
+gpt_variation_aware_standardization,17,15,8,40,0.425
