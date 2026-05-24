@@ -125,13 +125,9 @@ The table below shows the automatic evaluation results on the 70-example dataset
 | GPT variation-aware standardization | 0.0286 | 0.7355 | 0.7238 |
 | GPT context-aware standardization | 0.0286 | 0.7284 | 0.7111 |
 
-Google Translate performs the worst among the evaluated systems on this small dataset. This supports the motivation that at least one widely used off-the-shelf MT system is unreliable for fully normalizing social-media-style written Cantonese in this benchmark.
+Google Translate has the lowest automatic scores on this small dataset. Among the GPT-based methods, the variation-aware prompt achieves the highest Char-F1 and edit similarity, although the differences between GPT prompts are small.
 
-Among the GPT-based methods, the variation-aware standardization prompt achieves the highest Char-F1 and edit similarity. This suggests that explicitly prompting the model with common online Cantonese variation can help.
-
-The direct replacement baseline receives the highest automatic character-level scores overall. However, this should be interpreted cautiously. Direct replacement preserves many surface characters from the Cantonese input, which can increase character overlap even when the output is unnatural or only partially standardized.
-
-Because multiple valid Standard Written Chinese normalizations are possible, small differences in automatic scores should be interpreted cautiously. For this reason, I also include a small manual evaluation below.
+The direct replacement baseline receives the highest Char-F1 and edit similarity overall, but this should be interpreted cautiously because it preserves many surface characters from the Cantonese input. I therefore include a small manual evaluation below.
 
 ## Small Manual Evaluation
 
