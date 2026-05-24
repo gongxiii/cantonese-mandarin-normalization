@@ -125,7 +125,7 @@ The table below shows the automatic evaluation results on the 70-example dataset
 | GPT variation-aware standardization | 0.0286 | 0.7355 | 0.7238 |
 | GPT context-aware standardization | 0.0286 | 0.7284 | 0.7111 |
 
-Google Translate performs the worst among the evaluated systems on this dataset. This supports the motivation that off-the-shelf MT systems are not reliable for social-media-style written Cantonese normalization.
+Google Translate performs the worst among the evaluated systems on this small dataset. This supports the motivation that at least one widely used off-the-shelf MT system is unreliable for fully normalizing social-media-style written Cantonese in this benchmark.
 
 Among the GPT-based methods, the variation-aware standardization prompt achieves the highest Char-F1 and edit similarity. This suggests that explicitly prompting the model with common online Cantonese variation can help.
 
@@ -137,13 +137,7 @@ Because multiple valid Standard Written Chinese normalizations are possible, sma
 
 Because automatic character-level metrics can reward surface overlap, I also conducted a small manual evaluation on 40 representative examples. The examples were sampled by variation type from the 70-example dataset.
 
-I compared three methods: Google Translate, direct replacement, and GPT variation-aware standardization. Each output was assigned one of three labels:
-
-- `acceptable`: the meaning is preserved and the output is fluent Standard Written Chinese.
-- `partial`: the general meaning is preserved, but the output contains Cantonese residue, unnatural wording, missing pragmatic tone, or incomplete normalization.
-- `wrong`: the output has a clear meaning error, fails to standardize the sentence, or is not usable as Standard Written Chinese.
-
-Traditional/Simplified script differences were ignored during manual evaluation.
+Using the manual evaluation setup described above, I compared Google Translate, direct replacement, and GPT variation-aware standardization on 40 representative examples.
 
 | Method | Acceptable | Partial | Wrong | Acceptable Rate |
 |---|---:|---:|---:|---:|
@@ -253,7 +247,7 @@ GPT variation-aware:
 
 > 如果卖得比两份饭还贵就不会帮忙了。
 
-The direct replacement baseline handles `幫趁` relatively well because it is covered by the dictionary. Google Translate leaves several Cantonese forms untranslated. The GPT output is fluent, but it misinterprets `幫趁`, which means to patronize a shop or buy from a business, as `帮忙` “to help.” This changes the intended meaning.It also misinterprets `兩餸飯`, a common Hong Kong local food term, as ordinary “two portions of rice.” These errors change the intended meaning of the sentence.
+The direct replacement baseline handles `幫趁` relatively well because it is covered by the dictionary. Google Translate leaves several Cantonese forms untranslated. The GPT output is fluent, but it misinterprets `幫趁`, which means to patronize a shop or buy from a business, as `帮忙` “to help.” This changes the intended meaning. It also misinterprets `兩餸飯`, a common Hong Kong local food term, as ordinary “two portions of rice.” These errors change the intended meaning of the sentence.
 
 ### 5. Idiomatic expressions may be translated too literally
 
