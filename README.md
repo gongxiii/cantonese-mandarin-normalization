@@ -6,9 +6,11 @@ This project builds a small prototype for normalizing social-media-style written
 
 Informal written Cantonese on social media is often difficult for automatic translation systems because the writing is not standardized. The same expression may appear in different forms, such as 有D, 有d, 個d, 你地, 佢地, 左, 既, like, post, or chok.
 
-This project asks: how well do different automatic methods standardize social-media-style written Cantonese into Standard Written Chinese?
-
 The goal is not to build a full Cantonese machine translation system. Instead, this is a small prototype and evaluation benchmark for one specific bottleneck: online Cantonese orthographic and lexical variation.
+
+In this project, **Standard Written Chinese** refers to Mandarin-based written Chinese phrasing rather than simply the use of Simplified Chinese characters. Outputs are represented and evaluated in Simplified Chinese for consistency, but Traditional/Simplified script differences are not treated as normalization errors.
+
+Although the task is framed as normalization, some examples require limited lexical paraphrasing or semantic interpretation, especially for Cantonese slang, idioms, and pragmatic sentence-final particles. The project therefore focuses on sentence-level normalization of informal written Cantonese into Mandarin-based Standard Written Chinese.
 
 ## Data Collection Notes
 
@@ -33,6 +35,8 @@ The outputs were copied without semantic correction. Only formatting issues such
 The direct replacement baseline is a simple rule-based prototype implemented in `src/dictionary_baseline.py`.
 
 It uses a manually written replacement list for common Cantonese forms, informal spellings, code-mixed items, and slang. For example, it maps forms such as `有D`, `你地`, `唔`, `冇`, `like`, `post`, `拍拖`, and `收晒皮` to approximate Standard Chinese equivalents.
+
+The baseline applies direct string replacement without tokenization, word-boundary control, or context-sensitive disambiguation. This makes the method transparent and easy to reproduce, but it also makes it vulnerable to substring replacement errors and unnatural word order.
 
 This baseline is intentionally simple. It tests whether word-level replacement is sufficient for this normalization task.
 
@@ -88,7 +92,7 @@ The following automatic metrics are reported for all six methods:
 
 Before scoring, both predictions and references are converted to Simplified Chinese. This avoids penalizing outputs only because of Traditional/Simplified script differences.
 
-These metrics are useful but limited. Exact match is very strict, while character-level metrics can reward surface overlap even when the output is unnatural or only partially standardized. Multiple Standard Written Chinese outputs can also be acceptable for the same Cantonese input.
+These metrics are useful but limited. Exact match is very strict, while character-level metrics can reward surface overlap even when the output is unnatural or only partially standardized. Multiple Standard Written Chinese outputs can also be acceptable for the same Cantonese input. The manual references should therefore be interpreted as evaluation anchors rather than the only possible correct Standard Written Chinese outputs.
 
 ### Manual evaluation
 
@@ -307,11 +311,13 @@ Overall, the qualitative analysis suggests that GPT-based prompting improves flu
 
 The results show that social-media-style Cantonese normalization is not only a word replacement problem. The main difficulties come from informal orthography, English code-mixing, Cantonese slang, and pragmatic particles.
 
+In practice, the boundary between normalization and translation is not always sharp: some inputs can be standardized through orthographic replacement, while others require interpreting slang, idioms, local cultural references, or pragmatic particles.
+
 The automatic metrics and manual evaluation show different aspects of system behavior. Direct replacement receives the highest automatic character-level scores, but the manual evaluation shows that its outputs are often not acceptable as fluent Standard Written Chinese. This is because direct replacement preserves many input characters while failing to handle syntax, tone, context, and naturalness.
 
-Google Translate performs the worst in automatic evaluation and has a low manual acceptable rate. This supports the motivation that off-the-shelf MT systems are unreliable for social-media-style written Cantonese normalization. In several examples, Google Translate leaves Cantonese expressions unchanged or fails to normalize code-mixed and informal online forms.
+Google Translate performs the worst among the evaluated systems on this small dataset. This supports the motivation that at least one widely used off-the-shelf MT system is unreliable for fully normalizing social-media-style written Cantonese in this benchmark.
 
-Among the GPT-based methods, the variation-aware prompt performs best overall. It has the highest automatic scores among GPT methods and the highest manual acceptable rate. This suggests that explicitly prompting the model with common online Cantonese variation can help improve normalization quality.
+Among the GPT-based methods, the variation-aware standardization prompt achieves the highest Char-F1 and edit similarity, although the differences between GPT prompts are small. This suggests that explicitly prompting the model with common online Cantonese variation may help, but the automatic-score differences should not be overinterpreted.
 
 However, the GPT variation-aware method does not solve the task completely. It still struggles with Cantonese slang, sarcastic tone, sentence-final particles, and cases where several Standard Chinese paraphrases are possible. This is why the manual acceptable rate is higher than the other systems but still below 50%.
 
@@ -329,7 +335,7 @@ The automatic metrics are limited. Exact match is very strict, while character-l
 
 The rule-based baseline depends on a manually written replacement list. It can perform well when a phrase is already covered by the dictionary, but it does not generalize well to unseen slang, new spellings, or context-dependent expressions.
 
-Finally, the GPT-based methods were tested using prompt engineering rather than model training. The results may vary with model version, decoding settings, and prompt wording. This project should therefore be understood as a reproducible prototype rather than a production-ready Cantonese normalization system.
+Finally, the GPT-based methods were tested using prompt engineering rather than model training. The results may vary with model version, decoding settings, and prompt wording. For stronger reproducibility, future versions should record the exact GPT model name, API date or model snapshot if available, temperature, decoding parameters, and the date on which Google Translate outputs were collected. This project should therefore be understood as a reproducible prototype rather than a production-ready Cantonese normalization system.
 
 ## Acknowledgment of AI Assistance
 
