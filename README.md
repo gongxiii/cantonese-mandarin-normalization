@@ -135,8 +135,6 @@ Because multiple valid Standard Written Chinese normalizations are possible, sma
 
 ## Small Manual Evaluation
 
-Because automatic character-level metrics can reward surface overlap, I also conducted a small manual evaluation on 40 representative examples. The examples were sampled by variation type from the 70-example dataset.
-
 Using the manual evaluation setup described above, I compared Google Translate, direct replacement, and GPT variation-aware standardization on 40 representative examples.
 
 | Method | Acceptable | Partial | Wrong | Acceptable Rate |
@@ -147,7 +145,7 @@ Using the manual evaluation setup described above, I compared Google Translate, 
 
 The manual evaluation gives a different perspective from the automatic metrics. Although direct replacement receives the highest automatic character-level scores, only 20% of its sampled outputs were judged acceptable. This suggests that automatic metrics overestimate word-replacement methods because they preserve many surface characters from the input.
 
-GPT variation-aware standardization has the highest manual acceptable rate, with 42.5% acceptable outputs. This supports the idea that task-specific LLM prompting can improve normalization quality compared with Google Translate and direct replacement, although many cases remain only partially correct or wrong.
+GPT variation-aware standardization has the highest manual acceptable rate, with 42.5% acceptable outputs. For this small sample, I take this as preliminary evidence that task-specific prompting can help, although many cases remain only partially correct or wrong.
 
 ## Qualitative Error Analysis
 
@@ -315,13 +313,11 @@ Among the GPT-based methods, the variation-aware standardization prompt achieves
 
 However, the GPT variation-aware method does not solve the task completely. It still struggles with Cantonese slang, sarcastic tone, sentence-final particles, and cases where several Standard Chinese paraphrases are possible. This is why the manual acceptable rate is higher than the other systems but still below 50%.
 
-Overall, the prototype shows that task-specific LLM prompting is a useful intervention for this bottleneck, but it should be evaluated with both automatic and manual methods. Automatic character-level metrics are useful for reproducibility, but they can overestimate outputs that preserve surface characters and underestimate fluent paraphrases.
+Overall, I see task-specific prompting as useful but not sufficient. The prototype is most useful as a small benchmark for comparing failure modes, especially where automatic scores and manual judgments disagree.
 
 ## Limitations
 
-This is a small prototype-level benchmark with 70 manually curated examples. It is not an unbiased or representative sample of all written Cantonese on social media. The examples were selected because they illustrate common normalization difficulties, so the results should be interpreted as evidence about specific bottlenecks rather than as a general estimate of real-world system performance.
-
-The dataset is also limited in domain. Most examples come from publicly visible YouTube comments and Hong Kong online forum discussions. Other domains, such as private messaging, news comments, subtitles, or longer forum threads, may contain different writing styles and different normalization challenges.
+This is a small prototype-level benchmark with 70 manually curated examples, mostly from publicly visible YouTube comments and Hong Kong online forum discussions. The examples were selected to illustrate common normalization difficulties, so the dataset should not be treated as a representative sample of all written Cantonese on social media. Other domains, such as private messaging, news comments, subtitles, or longer forum threads, may show different writing styles and error patterns.
 
 The Standard Written Chinese references were written by one annotator. Since multiple valid normalizations are often possible, the references should be treated as evaluation anchors rather than unique ground truth. A larger project would ideally include multiple annotators and measure inter-annotator agreement.
 
@@ -503,13 +499,3 @@ After all output files have been generated, all automatic score summaries can be
 ```bash
 cat results/*summary.csv
 ```
-
-## Main Takeaway
-
-This project shows that social-media-style written Cantonese normalization is a real bottleneck for off-the-shelf MT systems. Google Translate often fails to fully standardize informal Cantonese comments, especially when they contain code-mixing, slang, nonstandard spellings, or sentence-final particles.
-
-A simple direct replacement baseline can obtain high automatic character-level scores, but the manual evaluation shows that this does not necessarily mean the output is fluent or acceptable. This highlights the limitation of relying only on automatic string-based metrics.
-
-The GPT variation-aware prompt performs best in the small manual evaluation and best among GPT methods in automatic evaluation. This suggests that task-specific LLM prompting is a useful prototype intervention, although it does not fully solve the problem.
-
-Overall, this project provides a small reproducible benchmark and prototype pipeline for evaluating Cantonese-to-Standard-Chinese normalization in social-media contexts.
